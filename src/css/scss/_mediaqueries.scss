@@ -1,0 +1,116 @@
+@use 'vars' as v;
+
+/* HEADER */
+@media (max-width: 1045px) {
+    //Bredda meny
+    .menu-flex {
+        width: 90%;
+        top: 0.5em;
+        padding: 0.2em;
+
+        .logo {
+            width: 7em;
+        }
+    }
+    .main-nav ul {
+        width: 60vw;
+    }
+    //Minska hero-text
+    .hero-text {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 700px) {
+    //hero-text
+    .hero-text {
+        left: 10%;
+        top: 60%;
+        font-size: 0.9em;
+        width: 45vw;
+    }
+}
+
+/* HAMBURGERMENY */
+@media (max-width: 550px) {
+    //Gör om hela menyn!
+    .menu-flex {
+        width: 90%;
+        padding: 0.3em;
+
+        .logo {
+            position: relative;
+            z-index: 3;
+            margin-top: 0.1em;
+        }
+    }
+
+    //Visa hamburgare
+    .nav-container button {
+        display: block;
+        position: relative;
+        z-index: 3;
+    }
+
+    //Gör om styling på meny-items, placera utanför skärm
+    .main-nav ul {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        background-color: v.$darkblue;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: center;
+        border-radius: 50px;
+        min-height: 400px;
+        height: 50vh;
+        top: -5000px;
+        left: 0;
+        @include v.transition;
+    }
+
+    //För tillbaka när aktiv
+    .main-nav.active ul {
+        top: 0;
+    }
+    //Ta bort hero-text
+    .hero-text {
+        display: none;
+    }
+
+    //Visa mobile-text
+    p.mobile-text {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    //Gör om meny lite
+    .menu-flex {
+        background-color: rgba(23, 59, 69, 0.85);
+        padding: 0 0.4em;
+    }
+
+    //Flytta knapp
+    .nav-container button {
+        margin: 0.1em;
+
+        //Gör hamburgare mindre; justera streck
+        span {
+            width: 1.5em;
+            margin: 0.3em;
+        }
+
+        &.active {
+            span:first-child {
+                transform: translateY(6px) rotate(225deg);
+            }
+
+            span:last-child {
+                transform: translateY(-6px) rotate(-225deg);
+            }
+        }
+    }
+}

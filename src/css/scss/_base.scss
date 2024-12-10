@@ -1,0 +1,49 @@
+@use 'vars' as v;
+
+/* Nollställningar, allmänna regler */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 2700px;
+    margin: auto;
+    overflow-x: hidden;
+    font-family: v.$play;
+    background-color: v.$pale;
+    line-height: 1.5;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    max-width: 75em;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    padding: 0.7em 1.5em;
+    font-size: 1em;
+    border-radius: 10px;
+    font-family: v.$play;
+    @include v.transition;
+}
+
+.button.action-btn {
+    background-color: v.$red;
+    color: white;
+
+    &:hover {
+        background-color: darken(v.$red, 15%);
+    }
+}

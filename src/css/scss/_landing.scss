@@ -1,0 +1,115 @@
+@use 'vars' as v;
+
+/* STARTSIDA */
+
+.text-content {
+    max-width: 75em;
+    margin: auto;
+
+    h1 {
+        margin-top: 1em;
+    }
+    h1,
+    h2 {
+        margin-bottom: 1.5em;
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+p.mobile-text {
+    display: none;
+}
+
+//GRID
+.lp-grid {
+    display: grid;
+    width: 100%;
+    grid-gap: 1.5em;
+    grid-template-areas:
+        'hundmat hundmat halsband'
+        'leksaker grooming halsband';
+
+    .grid-item {
+        border: 1px solid black;
+        min-height: 8em;
+        border-radius: 30px;
+        position: relative;
+        color: white;
+        font-size: 1.4em;
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .img {
+            border-radius: 30px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid white;
+            @include v.transition;
+        }
+    }
+
+    #hundmat {
+        grid-area: hundmat;
+        background-color: v.$orange;
+
+        .img {
+            background: url(../images/blackdog.jpg);
+            background-size: cover;
+            background-position-y: 70%;
+            opacity: 50%;
+
+            &:hover {
+                opacity: 40%;
+            }
+        }
+    }
+    #leksaker {
+        grid-area: leksaker;
+        background-color: v.$green;
+
+        .img {
+            background: url(../images/groenendael.jpg);
+            background-size: cover;
+            opacity: 30%;
+
+            &:hover {
+                opacity: 20%;
+            }
+        }
+    }
+    #koppel {
+        grid-area: halsband;
+        background-color: v.$darkblue;
+
+        .img {
+            background: url(../images/dalmatian.jpg);
+            background-size: cover;
+            background-position-y: 50%;
+            opacity: 28%;
+
+            &:hover {
+                opacity: 20%;
+            }
+        }
+    }
+    #grooming {
+        grid-area: grooming;
+        background-color: v.$red;
+
+        .img {
+            background: url(../images/labrador.jpg);
+            background-size: cover;
+            background-position-y: 50%;
+            opacity: 28%;
+
+            &:hover {
+                opacity: 20%;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+/* VARIABLER OCH MIXINS */
+
+$pale: #f4f0f0;
+$orange: #ff8225;
+$red: #b43f3f;
+$darkblue: #173b45;
+$green: #778b42;
+$play: Play, Arial, Helvetica, sans-serif;
+
+/* Transition-mixin */
+@mixin transition {
+    transition: 0.8s ease;
+    -webkit-transition: 0.8s ease;
+    -moz-transition: 0.8s ease;
+}

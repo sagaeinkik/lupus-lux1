@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupus Lux</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="css/main.scss">
+    <!-- JAVASCRIPT -->
+    <script src="js/burger.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <div class="menu-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/lupuslux-white.svg" alt="Lupus Lex logotyp">
+                </a>
+            </div> <!-- slut på logo -->
+            <div class="nav-container">
+                <button class="hamburgerbtn">
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                </button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Startsida</a></li>
+                        <li><a href="#">Produkter</a></li>
+                        <li><a href="#">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div> <!-- slut på nav-container -->
+        </div> <!-- slut på menu flex -->
+        <!-- HEROBILD -->
+        <div class="hero-container">
+            <picture>
+                <!-- Liten fil -->
+                <source media="(max-width: 600px)" srcset="images/puppy.jpg?as=avif&width=600" type="image/avif">
+                <source media="(max-width: 600px)" srcset="images/puppy.jpg?as=webp&width=600" type="image/webp">
+                <source media="(max-width: 600px)" srcset="images/puppy.jpg?as=jpg&width=600" type="image/jpg">
+                <!-- Medium fil
+                -->
+                <source media="(min-width: 601px) and (max-width: 1200px)" srcset="images/puppy.jpg?as=avif&width=1200"
+                    type="image/avif">
+                <source media="(min-width: 601px) and (max-width: 1200px)" srcset="images/puppy.jpg?as=webp&width=1200"
+                    type="image/webp">
+                <source media="(min-width: 601px) and (max-width: 1200px)" srcset="images/puppy.jpg?as=jpg&width=1200"
+                    type="image/jpg">
+                <!-- Stor fil -->
+                <source media="(min-width: 1201px)" srcset="images/puppy.jpg?as=avif" type="image/avif">
+                <source media="(min-width: 1201px)" srcset="images/puppy.jpg?as=webp" type="image/webp">
+                <source media="(min-width: 1201px)" srcset="images/puppy.jpg?as=jpg" type="image/jpg">
+                <img class="hero" src="images/puppy.jpg" alt="Golden retriever-valp som går genom en härlig skog">
+            </picture>
+            <div class="hero-text">
+                <p>En hunds kärlek är ovärderlig. Därför erbjuder Lupux Lux premiumprodukter för hundar, från exklusiva
+                    tillbehör till hälsosamma foder. Din hund förtjänar det bästa.
+                </p>
+                <a href="#" class="button action-btn">Handla nu</a>
+            </div> <!-- slut på hero-text -->
+        </div> <!-- slut på hero -->
+    </header>
+    <main>
+        <div class="text-content">
+
+            <h1>Lupus Lux</h1>
+            <p class="mobile-text">En hunds kärlek är ovärderlig. Därför erbjuder Lupux Lux premiumprodukter för hundar,
+                från exklusiva
+                tillbehör till hälsosamma foder. Din hund förtjänar det bästa.
+            </p>
+            <h2>Utforska kategorier</h2>
+
+            <div class="lp-grid">
+                <a href="#" class="grid-item" id="hundmat">
+                    <div class="img"></div>
+                    <p>Hundmat</p>
+                </a> <!-- slut på grid-item -->
+                <a href="#" class="grid-item" id="koppel">
+                    <div class="img"></div>
+                    <p>Koppel & halsband</p>
+                </a> <!-- slut på grid-item -->
+                <a href="#" class="grid-item" id="leksaker">
+                    <div class="img"></div>
+                    <p>Leksaker</p>
+                </a> <!-- slut på grid-item -->
+                <a href="#" class="grid-item" id="grooming">
+                    <div class="img"></div>
+                    <p>Pälsvård</p>
+                </a> <!-- slut på grid-item -->
+            </div> <!-- slut på lp-grid -->
+        </div> <!-- slut på text-content -->
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
