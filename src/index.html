@@ -18,8 +18,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="menu-flex">
+    <header id="top">
+        <div class="menu-flex landing-page">
             <div class="logo">
                 <a href="index.html">
                     <img src="images/lupuslux-white.svg" alt="Lupus Lex logotyp">
@@ -34,8 +34,9 @@
                 <nav class="main-nav">
                     <ul>
                         <li><a href="index.html">Startsida</a></li>
-                        <li><a href="#">Produkter</a></li>
-                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="products.html">Produkter</a></li>
+                        <li><a href="#">Om oss</a></li>
+                        <li><a href="#">Kassa</a></li>
                     </ul>
                 </nav>
             </div> <!-- slut på nav-container -->
@@ -65,27 +66,27 @@
             </p>
             <h2>Utforska kategorier</h2>
 
-            <div class="grid-container" id="lp-grid">
-                <a href="#" class="lp-grid-item" id="hundmat">
+            <section class="grid-container" id="lp-grid">
+                <a href="products.html#dogfood-cat" class="lp-grid-item" id="hundmat">
                     <div class="img"></div>
                     <p>Hundmat</p>
                 </a> <!-- slut på lp-grid-item -->
-                <a href="#" class="lp-grid-item" id="koppel">
+                <a href="products.html#kh-cat" class="lp-grid-item" id="koppel">
                     <div class="img"></div>
                     <p>Koppel & halsband</p>
                 </a> <!-- slut på lp-grid-item -->
-                <a href="#" class="lp-grid-item" id="leksaker">
+                <a href="products.html#toys-cat" class="lp-grid-item" id="leksaker">
                     <div class="img"></div>
                     <p>Leksaker</p>
                 </a> <!-- slut på lp-grid-item -->
-                <a href="#" class="lp-grid-item" id="grooming">
+                <a href="products.html#extra-cat" class="lp-grid-item" id="grooming">
                     <div class="img"></div>
-                    <p>Pälsvård</p>
+                    <p>Hundbäddar</p>
                 </a> <!-- slut på lp-grid-item -->
-            </div> <!-- slut på grid-container -->
+            </section> <!-- slut på grid-container -->
         </div> <!-- slut på page-content -->
         <div class="full-width">
-            <div class="grid-container" id="quality-grid">
+            <section class="grid-container" id="quality-grid">
                 <div class="q-grid-item textitem">
                     <h2>Varför välja Lupus Lux?</h2>
                     <p>Vi är trötta på saker som
@@ -105,50 +106,116 @@
                     <img src="images/chat.svg" alt="Ikon föreställande pratbubblor">
                     <p class="icon-desc">Tillgänglig kundtjänst</p>
                 </div> <!-- grid item -->
-            </div> <!-- slut påt grid-container-->
+            </section> <!-- slut påt grid-container-->
         </div> <!-- slut på full-width -->
         <div class="page-content">
             <h2>Utvalda produkter</h2>
-            <div class="grid-container" id="chosen-products">
+            <section class="grid-container" id="chosen-products">
 
-                <div class="prod-grid-item">
-                    <img src="images/harness.jpg"
-                        alt="En ljus långhårig hund som sitter i gräset. Den har en blå sele på sig">
-                    <div class="prod-desc">
-                        <p class="prod-title">Hundsele</p>
-                        <div class="prod-flex">
-                            <p class="prod-price">399:-</p>
-                            <a href="#"><span>&#10132;</span></a>
-                        </div> <!-- slut på prod flex -->
-                    </div> <!-- slut på prod-desc -->
-                </div> <!-- slut på grid item -->
-                <div class="prod-grid-item">
-                    <img src="images/bcfrisbee.jpg"
-                        alt="En blåmerlerad korthårig border collie som hoppar i luften för att fånga en frisbee">
-                    <div class="prod-desc">
-                        <p class="prod-title">Frisbee</p>
-                        <div class="prod-flex">
-                            <p class="prod-price">129:-</p>
-                            <a href="#"><span>&#10132;</span></a>
-                        </div> <!-- slut på prod flex -->
-                    </div> <!-- slut på prod-desc -->
-                </div> <!-- slut på grid item -->
-                <div class="prod-grid-item">
-                    <img src="images/chihuahua.jpg"
-                        alt="En chihuahuakorsning iklädd fluga, mot en rosa bakgrund. Den har en gul leksaksanka vid tassarna.">
-                    <div class="prod-desc">
-                        <p class="prod-title">Halsband med fluga</p>
-                        <div class="prod-flex">
-                            <p class="prod-price">259:-</p>
-                            <a href="#"><span>&#10132;</span></a>
-                        </div> <!-- slut på prod flex -->
-                    </div> <!-- slut på prod-desc -->
-                </div> <!-- slut på grid item -->
-            </div> <!-- Slut på grid-container -->
+                <a class="prod-grid-item" href="#">
+                    <div class="card">
+                        <img src="images/harness.jpg"
+                            alt="En ljus hund med blå sele på sig som sitter och tittar mot kameran">
+                        <div class="prod-desc">
+                            <p class="prod-title">Hundsele i nylon</p>
+                            <div class="prod-flex">
+                                <p class="prod-price">399:-</p>
+                                <p class="arrow">&#10132;</p>
+                            </div> <!-- slut på prod-flex -->
+                        </div> <!-- slut på prod-desc -->
+                    </div> <!-- slut på card -->
+                </a> <!-- slut grid item -->
+
+                <a class="prod-grid-item" href="#">
+                    <div class="card">
+                        <img src="images/bcfrisbee.jpg"
+                            alt="En korthårig blåmerlerad border collie hoppar i luften efter en frisbee">
+                        <div class="prod-desc">
+                            <p class="prod-title">Frisbee</p>
+                            <div class="prod-flex">
+                                <p class="prod-price">129:-</p>
+                                <p class="arrow">&#10132;</p>
+                            </div> <!-- slut på prod-flex -->
+                        </div> <!-- slut på prod-desc -->
+                    </div> <!-- slut på card -->
+                </a> <!-- slut grid item -->
+
+                <a class="prod-grid-item" href="#">
+                    <div class="card">
+                        <img src="images/chihuahua.jpg"
+                            alt="En chihuahuakorsning med gul leksaksanka vid tassarna och ett halsband med fluga på tittar mot kameran, mot en rosa bakgrund">
+                        <div class="prod-desc">
+                            <p class="prod-title">Halsband med fluga</p>
+                            <div class="prod-flex">
+                                <p class="prod-price">259:-</p>
+                                <p class="arrow">&#10132;</p>
+                            </div> <!-- slut på prod-flex -->
+                        </div> <!-- slut på prod-desc -->
+                    </div> <!-- slut på card -->
+                </a> <!-- slut grid item -->
+
+            </section> <!-- Slut på grid-container -->
+
+
+            <h2>Nyheter</h2>
+            <article>
+                <img src="images/rubberducks.jpg" alt="Gummiankor mot vit bakgrund">
+                <div class="article-text">
+
+                    <h2>Veckans erbjudande</h2>
+                    <p>Det är fullkomlig gummiank-bonanza! Hela vecka 53 får du som kund två gummiankor på köpet när du
+                        handlar för 1 krona eller mer!</p>
+                    <p>Detta var helt och hållet planerat och beror inte på ett missöde i beställning och/eller
+                        missförstånd
+                        med leverantör.</p>
+                    <p>Gäller så långt lagret räcker. Max 930 per kund.</p>
+                </div>
+            </article>
+
+            <article>
+                <img src="images/bordercollie.jpg" alt="En brun/vit border collie med vänligt uttryck">
+                <div class="article-text">
+                    <h2>Clinic med Ulf Ulvesson</h2>
+                    <p>Är hunden alfan om den går först in genom ytterdörren? Är en hund kapabel att känna skam när den
+                        har
+                        gjort fel, eller blir den bara obekväm för att du trycker upp en upptuggad socka i ansiktet på
+                        den
+                        och
+                        skäller på den? Är hunden alltid glad när den viftar på svansen?</p>
+                    <p>Den 30 februari har vi äran att välkomna Ulf Ulvesson, professor i etologi, som länge har
+                        undervisat
+                        i ämnena. Ulvesson arbetar hårt med att spräcka hål på de många myter som finns kring
+                        hundhållning,
+                        och försöker att bistå med att reda ut vilka tillvägagångssätt som alltid funkar, vilka som kan
+                        funka ibland, och vilka som man rentav ska akta sig för.</p>
+                    <p>Deltagare på clinicen får 20% rabatt på våra produkter vid sitt nästa köp.</p>
+                    <p>Bokningsinformation hittar du någon annanstans.</p>
+                </div>
+            </article>
+
+            <article>
+                <div class="article-text">
+                    <h2>Leveransproblem</h2>
+                    <p>På grund av oförutsedda komplikationer har vår leverans av tennisbollar fördröjts på obestämd
+                        tid. Vi
+                        arbetar med problemet och ber om ursäkt till våra kunders golden retrievers som fullt
+                        förståeligt
+                        måste vara otröstliga vid det här laget.</p>
+                    <p>Som plåster på såren kan vi erbjuda extra bra pris på frisbees, eller hänvisa till pinnar man
+                        hittar
+                        ute på promenader.</p>
+                </div>
+            </article>
         </div> <!-- slut på page-content -->
+
     </main>
     <footer>
-
+        <div class="page-content">
+            <img src="images/lupushead-white.svg" alt="Varghuvudet från Lupus Lux-logotyp">
+            <a href="#top">Tillbaka till toppen</a>
+            <p class="credits">Gjord av Saga Einarsdotter Kikajon för Webbutveckling med WordPress, Mittuniversitetet
+                2024</p>
+        </div>
     </footer>
 </body>
 

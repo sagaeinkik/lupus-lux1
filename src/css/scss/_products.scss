@@ -1,0 +1,25 @@
+@use 'vars' as v;
+
+//meddelande om det inte finns några produkter i kategori
+.empty-msg {
+    text-align: center;
+}
+
+//Wrapper
+.products-wrapper {
+    h2 {
+        text-align: left;
+        margin: 4em 0 0.5em;
+    }
+}
+
+//Kategorier
+.products-container {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+
+    .card {
+        max-width: 370px;
+    }
+}
