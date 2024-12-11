@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupus Lux</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="css/main.scss">
+    <!-- JAVASCRIPT -->
+    <script src="js/burger.js" type="module"></script>
+</head>
+
+<body>
+    <header id="top">
+        <div class="menu-flex underpage">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/lupuslux-white.svg" alt="Lupus Lex logotyp">
+                </a>
+            </div> <!-- slut på logo -->
+            <div class="nav-container">
+                <button class="hamburgerbtn">
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                    <span class="burger-bar"></span>
+                </button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Startsida</a></li>
+                        <li><a href="products.html" aria-current="page">Produkter</a></li>
+                        <li><a href="about.html">Om oss</a></li>
+                        <li><a href="#">Kassa</a></li>
+                    </ul>
+                </nav>
+            </div> <!-- slut på nav-container -->
+        </div> <!-- slut på menu flex -->
+    </header>
+    <main>
+        <div class="page-content">
+            <div class="breadcrumbs">
+                <a href="index.html">Startsida</a> / <a href="products.html">Produkter</a> / <a
+                    href="products.html#extra-cat">Hundbäddar och tillbehör</a> / <a href="sampleproduct.html"
+                    class="current">Exempelprodukt</a>
+            </div>
+            <h1>Exempelprodukt: Björnluva</h1>
+            <article class="single-product grid-container">
+                <div class="product-desc">
+                    <div class="text">
+
+                        <p>
+                            Det här är en exempelsida som ska demonstrera hur det kan se ut när man trycker på en
+                            produkt.
+                        </p>
+                        <p>I det här fallet är det en björnluva man kan trä över sin hunds huvud och göra den megagullig
+                            på
+                            nolltid.</p>
+                        <p>Den tål säkert tvätt i 60°.</p>
+                        <p>Finns i storlekarna XS (chihuahua) till XL (tibetansk mastiff). </p>
+                    </div>
+                    <form class="prod-ctrls">
+                        <div class="form-ctrl">
+
+                            <label for="size">Storlek:</label>
+                            <select name="size" id="size" required>
+                                <option value="" disabled selected>Välj i listan</option>
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        </div>
+                        <div class="form-ctrl">
+
+                            <label for="antal">Antal:</label>
+                            <input type="number" name="antal" id="antal" min="1" max="1500" value="1">
+                        </div>
+                        <input type="submit" value="Lägg i varukorg">
+                    </form>
+                </div> <!-- slut på product desc -->
+                <img src="images/amstaffbear.jpg" alt="Amstaff med en björnluva">
+            </article>
+
+            <h2>Se även</h2>
+            <section class="grid-container" id="chosen-products">
+
+                <a class="prod-grid-item" href="#">
+                    <div class="card">
+                        <img src="images/harness.jpg"
+                            alt="En ljus hund med blå sele på sig som sitter och tittar mot kameran">
+                        <div class="prod-desc">
+                            <p class="prod-title">Hundsele "Hederlig"</p>
+                            <div class="prod-flex">
+                                <p class="prod-price">399:-</p>
+                                <p class="arrow">&#10132;</p>
+                            </div> <!-- slut på prod-flex -->
+                        </div> <!-- slut på prod-desc -->
+                    </div> <!-- slut på card -->
+                </a> <!-- slut grid item -->
+
+                <a class="prod-grid-item" href="#">
+                    <div class="card">
+                        <img src="images/bcfrisbee.jpg"
+                            alt="En korthårig blåmerlerad border collie hoppar i luften efter en frisbee">
+                        <div class="prod-desc">
+                            <p class="prod-title">Frisbee</p>
+                            <div class="prod-flex">
+                                <p class="prod-price">129:-</p>
+                                <p class="arrow">&#10132;</p>
+                            </div> <!-- slut på prod-flex -->
+                        </div> <!-- slut på prod-desc -->
+                    </div> <!-- slut på card -->
+                </a> <!-- slut grid item -->
+
+                <a class="prod-grid-item" href="#">
+                    <div class="card">
+                        <img src="images/chihuahua.jpg"
+                            alt="En chihuahuakorsning med gul leksaksanka vid tassarna och ett halsband med fluga på tittar mot kameran, mot en rosa bakgrund">
+                        <div class="prod-desc">
+                            <p class="prod-title">Halsband "Hertig"</p>
+                            <div class="prod-flex">
+                                <p class="prod-price">259:-</p>
+                                <p class="arrow">&#10132;</p>
+                            </div> <!-- slut på prod-flex -->
+                        </div> <!-- slut på prod-desc -->
+                    </div> <!-- slut på card -->
+                </a> <!-- slut grid item -->
+
+            </section> <!-- Slut på grid-container -->
+
+
+        </div> <!-- Slut på page content -->
+    </main>
+    <footer>
+        <div class="page-content">
+            <img src="images/lupushead-white.svg" alt="Varghuvudet från Lupus Lux-logotyp">
+            <a href="#top">Tillbaka till toppen</a>
+            <p class="credits">Gjord av Saga Einarsdotter Kikajon för Webbutveckling med WordPress, Mittuniversitetet
+                2024</p>
+        </div>
+    </footer>
+</body>
+
+</html>
