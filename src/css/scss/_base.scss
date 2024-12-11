@@ -14,6 +14,7 @@ body {
     font-family: v.$play;
     background-color: v.$pale;
     line-height: 1.5;
+    position: relative;
 }
 
 ul li {
@@ -46,4 +47,14 @@ p {
     &:hover {
         background-color: darken(v.$red, 15%);
     }
+}
+
+.grid-container {
+    display: grid;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+    margin-top: 1em;
 }

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lupus Lux</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,22 +43,8 @@
         <!-- HEROBILD -->
         <div class="hero-container">
             <picture>
-                <!-- Liten fil -->
-                <source media="(max-width: 600px)" srcset="images/puppy.jpg?as=avif&width=600" type="image/avif">
-                <source media="(max-width: 600px)" srcset="images/puppy.jpg?as=webp&width=600" type="image/webp">
-                <source media="(max-width: 600px)" srcset="images/puppy.jpg?as=jpg&width=600" type="image/jpg">
-                <!-- Medium fil
-                -->
-                <source media="(min-width: 601px) and (max-width: 1200px)" srcset="images/puppy.jpg?as=avif&width=1200"
-                    type="image/avif">
-                <source media="(min-width: 601px) and (max-width: 1200px)" srcset="images/puppy.jpg?as=webp&width=1200"
-                    type="image/webp">
-                <source media="(min-width: 601px) and (max-width: 1200px)" srcset="images/puppy.jpg?as=jpg&width=1200"
-                    type="image/jpg">
-                <!-- Stor fil -->
-                <source media="(min-width: 1201px)" srcset="images/puppy.jpg?as=avif" type="image/avif">
-                <source media="(min-width: 1201px)" srcset="images/puppy.jpg?as=webp" type="image/webp">
-                <source media="(min-width: 1201px)" srcset="images/puppy.jpg?as=jpg" type="image/jpg">
+                <source media="(min-width: 1201px)" srcset="images/puppy.avif" type="image/avif">
+                <source media="(min-width: 1201px)" srcset="images/puppy.webp" type="image/webp">
                 <img class="hero" src="images/puppy.jpg" alt="Golden retriever-valp som går genom en härlig skog">
             </picture>
             <div class="hero-text">
@@ -68,7 +56,7 @@
         </div> <!-- slut på hero -->
     </header>
     <main>
-        <div class="text-content">
+        <div class="page-content">
 
             <h1>Lupus Lux</h1>
             <p class="mobile-text">En hunds kärlek är ovärderlig. Därför erbjuder Lupux Lux premiumprodukter för hundar,
@@ -77,25 +65,87 @@
             </p>
             <h2>Utforska kategorier</h2>
 
-            <div class="lp-grid">
-                <a href="#" class="grid-item" id="hundmat">
+            <div class="grid-container" id="lp-grid">
+                <a href="#" class="lp-grid-item" id="hundmat">
                     <div class="img"></div>
                     <p>Hundmat</p>
-                </a> <!-- slut på grid-item -->
-                <a href="#" class="grid-item" id="koppel">
+                </a> <!-- slut på lp-grid-item -->
+                <a href="#" class="lp-grid-item" id="koppel">
                     <div class="img"></div>
                     <p>Koppel & halsband</p>
-                </a> <!-- slut på grid-item -->
-                <a href="#" class="grid-item" id="leksaker">
+                </a> <!-- slut på lp-grid-item -->
+                <a href="#" class="lp-grid-item" id="leksaker">
                     <div class="img"></div>
                     <p>Leksaker</p>
-                </a> <!-- slut på grid-item -->
-                <a href="#" class="grid-item" id="grooming">
+                </a> <!-- slut på lp-grid-item -->
+                <a href="#" class="lp-grid-item" id="grooming">
                     <div class="img"></div>
                     <p>Pälsvård</p>
-                </a> <!-- slut på grid-item -->
-            </div> <!-- slut på lp-grid -->
-        </div> <!-- slut på text-content -->
+                </a> <!-- slut på lp-grid-item -->
+            </div> <!-- slut på grid-container -->
+        </div> <!-- slut på page-content -->
+        <div class="full-width">
+            <div class="grid-container" id="quality-grid">
+                <div class="q-grid-item textitem">
+                    <h2>Varför välja Lupus Lux?</h2>
+                    <p>Vi är trötta på saker som
+                        går sönder eller hundmat med en tvivelaktig ingredienslista. I vårt utbud hittar man därför
+                        endast produkter framtagna med fokus på hållbarhet, funktionalitet, omsorg och goda råvaror. Är
+                        du inte nöjd med produkterna är vår kundtjänst alltid redo att stå till tjänst.</p>
+                </div><!-- grid-item -->
+                <div class="q-grid-item">
+                    <img src="images/award.svg" alt="Ikon föreställande rosett">
+                    <p class="icon-desc">Kvalitetssäkrade produkter</p>
+                </div> <!-- grid item -->
+                <div class="q-grid-item">
+                    <img src="images/ecotransport.svg" alt="Ikon föreställande lastbil med en eko-symbol">
+                    <p class="icon-desc">Klimatkompenserad frakt</p>
+                </div> <!-- grid item -->
+                <div class="q-grid-item">
+                    <img src="images/chat.svg" alt="Ikon föreställande pratbubblor">
+                    <p class="icon-desc">Tillgänglig kundtjänst</p>
+                </div> <!-- grid item -->
+            </div> <!-- slut påt grid-container-->
+        </div> <!-- slut på full-width -->
+        <div class="page-content">
+            <h2>Utvalda produkter</h2>
+            <div class="grid-container" id="chosen-products">
+
+                <div class="prod-grid-item">
+                    <img src="images/harness.jpg"
+                        alt="En ljus långhårig hund som sitter i gräset. Den har en blå sele på sig">
+                    <div class="prod-desc">
+                        <p class="prod-title">Hundsele</p>
+                        <div class="prod-flex">
+                            <p class="prod-price">399:-</p>
+                            <a href="#"><span>&#10132;</span></a>
+                        </div> <!-- slut på prod flex -->
+                    </div> <!-- slut på prod-desc -->
+                </div> <!-- slut på grid item -->
+                <div class="prod-grid-item">
+                    <img src="images/bcfrisbee.jpg"
+                        alt="En blåmerlerad korthårig border collie som hoppar i luften för att fånga en frisbee">
+                    <div class="prod-desc">
+                        <p class="prod-title">Frisbee</p>
+                        <div class="prod-flex">
+                            <p class="prod-price">129:-</p>
+                            <a href="#"><span>&#10132;</span></a>
+                        </div> <!-- slut på prod flex -->
+                    </div> <!-- slut på prod-desc -->
+                </div> <!-- slut på grid item -->
+                <div class="prod-grid-item">
+                    <img src="images/chihuahua.jpg"
+                        alt="En chihuahuakorsning iklädd fluga, mot en rosa bakgrund. Den har en gul leksaksanka vid tassarna.">
+                    <div class="prod-desc">
+                        <p class="prod-title">Halsband med fluga</p>
+                        <div class="prod-flex">
+                            <p class="prod-price">259:-</p>
+                            <a href="#"><span>&#10132;</span></a>
+                        </div> <!-- slut på prod flex -->
+                    </div> <!-- slut på prod-desc -->
+                </div> <!-- slut på grid item -->
+            </div> <!-- Slut på grid-container -->
+        </div> <!-- slut på page-content -->
     </main>
     <footer>
 

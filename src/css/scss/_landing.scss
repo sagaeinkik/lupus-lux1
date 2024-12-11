@@ -2,18 +2,17 @@
 
 /* STARTSIDA */
 
-.text-content {
+.page-content {
+    width: 70%;
     max-width: 75em;
     margin: auto;
 
     h1 {
-        margin-top: 1em;
+        margin-bottom: 0.3em;
     }
     h1,
     h2 {
-        margin-bottom: 1.5em;
         text-align: center;
-        font-weight: 400;
     }
 }
 
@@ -21,23 +20,25 @@ p.mobile-text {
     display: none;
 }
 
-//GRID
-.lp-grid {
-    display: grid;
+//KATEGORIG-GRID
+#lp-grid {
     width: 100%;
+    margin-bottom: 2em;
+    margin-top: 1em;
     grid-gap: 1.5em;
     grid-template-areas:
         'hundmat hundmat halsband'
         'leksaker grooming halsband';
 
-    .grid-item {
-        border: 1px solid black;
+    //Grid items
+    .lp-grid-item {
         min-height: 8em;
         border-radius: 30px;
-        position: relative;
         color: white;
         font-size: 1.4em;
+        position: relative;
 
+        //Texten
         p {
             position: absolute;
             top: 50%;
@@ -48,15 +49,16 @@ p.mobile-text {
             border-radius: 30px;
             width: 100%;
             height: 100%;
-            border: 1px solid white;
             @include v.transition;
         }
     }
 
+    //Individuella grid items
     #hundmat {
         grid-area: hundmat;
         background-color: v.$orange;
 
+        //Positionera bakgrund
         .img {
             background: url(../images/blackdog.jpg);
             background-size: cover;
@@ -109,6 +111,67 @@ p.mobile-text {
 
             &:hover {
                 opacity: 20%;
+            }
+        }
+    }
+}
+
+//VARFÖR LUPUS LEX-GRID
+.full-width {
+    background-color: v.$red;
+    color: white;
+    margin: 3em 0;
+}
+#quality-grid {
+    width: 70%;
+    margin: auto;
+    padding: 1em 1em 2em 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 3em;
+    align-items: center;
+    justify-items: center;
+
+    .q-grid-item {
+        img {
+            width: 5em;
+        }
+    }
+    .q-grid-item:not(.textitem) {
+        text-align: center;
+    }
+}
+
+//UTVALDA PRODUKTER
+#chosen-products {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    margin: 2em 0;
+
+    .prod-grid-item {
+        background-color: white;
+        border-radius: 0 0 40px 40px;
+        font-size: 1.1em;
+
+        img {
+            width: 100%;
+        }
+
+        .prod-desc {
+            padding: 0.5em 1.5em;
+        }
+
+        .prod-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1em 0;
+
+            a {
+                color: white;
+                font-size: 1.3em;
+                background-color: v.$darkblue;
+                padding: 0.1em 0.4em;
+                border-radius: 50%;
             }
         }
     }
