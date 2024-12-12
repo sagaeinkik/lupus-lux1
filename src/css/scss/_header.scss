@@ -80,7 +80,6 @@ header {
 
     a {
         color: white;
-        @include v.transition;
 
         &:hover {
             color: v.$orange;
@@ -134,7 +133,7 @@ footer {
     a {
         color: white;
         text-decoration: 1px dotted underline;
-        @include v.transition;
+
         &:hover {
             color: v.$orange;
         }

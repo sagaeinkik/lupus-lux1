@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lupus Lux</title>
+    <title>Om oss | Lupus Lux</title>
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- GOOGLE FONTS -->
@@ -36,7 +36,6 @@
                         <li><a href="index.html">Startsida</a></li>
                         <li><a href="products.html">Produkter</a></li>
                         <li><a href="about.html" aria-current="page">Om oss</a></li>
-                        <li><a href="#">Kassa</a></li>
                     </ul>
                 </nav>
             </div> <!-- slut på nav-container -->
@@ -44,7 +43,86 @@
     </header>
     <main>
         <div class="page-content">
+            <h1>Om oss</h1>
+            <h2>Vår historia</h2>
+            <p>Året var 2002 när Kalle Blomqvist och Margareta Engström (mer känd som Madicken) träffades på en
+                hundutställning. De båda beklagade sig över utbudet på marknaden av hundprodukter, och ett starkt band
+                bildades.</p>
+            <p>De var framförallt trötta på att kasta pengar i sjön på hundleksaker som slets sönder på nolltid, hundmat
+                med mögelsporer eller andra sjukdomsframkallande ämnen, dyra tillskott och tillbehör som hunden ändå
+                inte tycker om.</p>
+            <p>Alltså lade Madicken fram ett förslag: att hon och Kalle gemensamt grundar en butik med de
+                produkter
+                de själva hade velat köpa. Lupus Lux föddes.</p>
+            <p>Sedan dess har vi jobbat outtröttligt för att tillhandahålla hundägare bättre alternativ än de är vana
+                vid.</p>
+            <h2>Krav på hållbarhet</h2>
+            <p>Alltför ofta står man inför svåra val som att avgöra vad som är viktigast; ett skäligt pris, bra råvaror,
+                hög kvalitetet, hållbarhet, och funktionalitet. Vill man ha hög kvalitet och funktionalitet skenar
+                priset ofta iväg. Vill man inte tömma plånboken alldeles för att köpa en hundleksak går den ofta sönder
+                efter bara någon veckas intensiv användning, eller är producerad på sätt som skadar miljön.</p>
+            <p>Så ska det inte behöva vara. Därför har vi har med stor noggrannhet valt ut de produkter vi själva skulle
+                ge till våra hundar med gott samvete. </p>
+            <p>En produkt ska vara hållbar: fysiskt, ekonomiskt och miljömässigt. Punkt slut.</p>
+            <h2>Medarbetare</h2>
+            <section class="grid-container employee-container">
+                <div class="employee">
+                    <img src="images/thispersondoesnotexist-1.jpg"
+                        alt="Autogenererad kvinna som tittar in i kameran och ler">
+                    <p>Margareta "Madicken" Engström</p>
+                    <p>Ägare, VD</p>
+                    <a href="mailto:margareta.engstrom@lupuslex.se" class="mail">margareta.engstrom@lupuslex.se</a>
+                </div> <!-- slut på employee -->
 
+                <div class="employee">
+                    <img src="images/thispersondoesnotexist.jpg"
+                        alt="Autogenererad man som tittar in i kameran och ler">
+                    <p>Kalle Blomqvist</p>
+                    <p>Ägare, COO</p>
+                    <a href="mailto:karl.blomqvist@lupuslex.se" class="mail">karl.blomqvist@lupuslex.se</a>
+                </div> <!-- slut på employee -->
+
+                <div class="employee">
+                    <img src="images/thispersondoesnotexist-2.jpg"
+                        alt="Autogenererad kvinna som tittar in i kameran och ler">
+                    <p>Karin Maria Eleonora Josefina Grankvist</p>
+                    <p>Butiksansvarig, marknadschef</p>
+                    <a href="mailto:karinmariaeleonorajosefin.grankvist@lupuslex.se"
+                        class="mail">karin&shy;maria&shy;eleonora&shy;josefin.grankvist@lupuslex.se</a>
+                </div> <!-- slut på employee -->
+
+                <div class="employee">
+                    <img src="images/loka.jpg" alt="Autogenererad kvinna som tittar in i kameran och ler">
+                    <p>Loka a.k.a Lokatten a.k.a Katten</p>
+                    <p>Produkttestare, Mood manager</p>
+                    <p style="font-style: italic">Ej kontaktbar</p>
+                </div> <!-- slut på employee -->
+            </section> <!-- slut på grid container -->
+
+            <!-- FORMULÄR -->
+            <h2>Kontakta oss</h2>
+            <p>Vill du komma i kontakt med oss? Fyll i ditt ärende nedan så kontaktar vi dig inom 24 timmar.</p>
+            <form class="contact">
+                <div class="form-ctrl">
+                    <label for="name">Namn:</label>
+                    <input type="text" name="name" id="name" required>
+                </div> <!-- slut på form-ctrl -->
+
+                <div class="form-ctrl">
+                    <label for="email">E-post:</label>
+                    <input type="email" name="email" id="email" required>
+                </div> <!-- slut på form-ctrl -->
+
+                <div class="form-ctrl">
+                    <label for="subject">Beskriv ditt ärende:</label>
+                    <textarea name="subject" id="subject" placeholder="Skriv något här" required></textarea>
+                </div> <!-- slut på form-ctrl -->
+
+                <div class="form-buttons">
+                    <input type="submit" value="Skicka meddelande">
+                    <input type="reset" value="Rensa">
+                </div> <!-- slut på form-buttons -->
+            </form>
         </div> <!-- Slut på page content -->
     </main>
     <footer>

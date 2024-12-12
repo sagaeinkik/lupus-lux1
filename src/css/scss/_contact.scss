@@ -1,0 +1,76 @@
+@use 'vars' as v;
+
+//Anställda
+.employee-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+
+    .employee {
+        justify-items: center;
+
+        a {
+            color: v.$darkblue;
+
+            &:hover {
+                color: v.$orange;
+            }
+        }
+    }
+
+    //Bilder
+    img {
+        border-radius: 50%;
+        max-width: 20em;
+    }
+}
+
+//Formulär
+.contact {
+    margin-top: 1em;
+
+    label {
+        display: block;
+        margin-left: 0.5em;
+        margin-bottom: 0.3em;
+    }
+
+    input[type='email'],
+    input[type='text'],
+    textarea {
+        font-family: v.$play;
+        font-size: 1em;
+        padding: 0.8em;
+        width: 100%;
+        margin-bottom: 1em;
+        border: none;
+        border-radius: 20px;
+
+        &:focus {
+            outline: 2px solid v.$orange;
+        }
+    }
+
+    //Knapparna
+    .form-buttons {
+        display: flex;
+        justify-content: space-between;
+
+        input[type='submit'] {
+            background-color: v.$darkblue;
+            color: white;
+
+            &:hover {
+                background-color: v.$green;
+            }
+        }
+
+        input[type='reset'] {
+            background-color: v.$red;
+            color: white;
+
+            &:hover {
+                background-color: v.$orange;
+            }
+        }
+    }
+}

@@ -29,7 +29,6 @@
 .breadcrumbs {
     a {
         color: v.$green;
-        @include v.transition;
 
         &:hover {
             color: v.$red;

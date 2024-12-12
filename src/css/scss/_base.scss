@@ -27,6 +27,7 @@ ul li {
 
 a {
     text-decoration: none;
+    @include v.transition;
 }
 
 p {
@@ -34,7 +35,8 @@ p {
 }
 
 .button,
-input[type='submit'] {
+input[type='submit'],
+input[type='reset'] {
     cursor: pointer;
     display: inline-block;
     border: none;
@@ -50,7 +52,7 @@ input[type='submit'] {
     color: white;
 
     &:hover {
-        background-color: darken(v.$red, 15%);
+        background-color: #7a2828;
     }
 }
 
