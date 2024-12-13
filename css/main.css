@@ -47,6 +47,7 @@ input[type=reset] {
   font-size: 1em;
   border-radius: 10px;
   font-family: Play, Arial, Helvetica, sans-serif;
+  font-weight: 400;
   transition: 0.8s ease;
   -webkit-transition: 0.8s ease;
   -moz-transition: 0.8s ease;
