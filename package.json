@@ -1,18 +1,10 @@
 {
   "name": "wp-moment4",
   "version": "1.0.0",
-  "source": "src/index.html",
-  "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "browserslist": ">0.5%, last 2 versions, not dead",
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.13.2",
-    "parcel": "^2.13.2"
-  }
+  "browserslist": ">0.5%, last 2 versions, not dead"
 }

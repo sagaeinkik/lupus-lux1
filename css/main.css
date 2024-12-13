@@ -1,0 +1,727 @@
+@charset "UTF-8";
+/* VARIABLER OCH MIXINS */
+/* Transition-mixin */
+/* Nollställningar, allmänna regler */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 2700px;
+  margin: auto;
+  overflow-x: hidden;
+  font-family: Play, Arial, Helvetica, sans-serif;
+  background-color: #f4f0f0;
+  line-height: 1.5;
+  position: relative;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.8s ease;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+}
+
+p {
+  max-width: 75em;
+}
+
+.button,
+input[type=submit],
+input[type=reset] {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  border-radius: 10px;
+  font-family: Play, Arial, Helvetica, sans-serif;
+  transition: 0.8s ease;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+}
+
+.button.action-btn {
+  background-color: #b43f3f;
+  color: white;
+}
+.button.action-btn:hover {
+  background-color: #7a2828;
+}
+
+.grid-container {
+  display: grid;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  margin-top: 1em;
+}
+
+img {
+  width: 100%;
+}
+
+/* HEADER */
+header {
+  position: relative;
+}
+
+/* Själva meny-containern */
+.menu-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #173b45;
+  width: 80%;
+  border-radius: 50px;
+  padding: 0.5em;
+}
+.menu-flex .logo {
+  width: 10em;
+  margin-left: 1em;
+}
+.menu-flex.landing-page {
+  position: absolute;
+  z-index: 1;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu-flex.underpage {
+  margin: 2em auto;
+}
+
+/* Hamburgermeny */
+.nav-container button {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin-right: 1em;
+  display: none;
+}
+.nav-container button span {
+  display: block;
+  height: 2px;
+  width: 2em;
+  margin: 0.4em;
+  background-color: white;
+  transition: 0.8s ease;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+}
+.nav-container button:hover span {
+  background-color: #ff8225;
+}
+.nav-container button.active span:first-child {
+  transform: translateY(7.5px) rotate(225deg);
+}
+.nav-container button.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-container button.active span:last-child {
+  transform: translateY(-7.5px) rotate(-225deg);
+}
+
+.main-nav ul {
+  display: flex;
+  width: 40vw;
+  justify-content: space-evenly;
+}
+.main-nav ul a {
+  color: white;
+}
+.main-nav ul a:hover {
+  color: #ff8225;
+}
+.main-nav ul a[aria-current=page] {
+  color: #ff8225;
+}
+.main-nav ul a[aria-current=page]:hover {
+  color: white;
+}
+
+.hero {
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  font-size: 1.4em;
+  color: white;
+  width: 30vw;
+  max-width: 25em;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.8s ease;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+}
+.hero-text .action-btn {
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+
+.hero-text.hidden {
+  opacity: 0;
+}
+
+footer {
+  background-color: #173b45;
+  color: white;
+  text-align: center;
+  margin: 5em 0 0 0;
+  padding: 2em;
+}
+footer a {
+  color: white;
+  text-decoration: 1px dotted underline;
+}
+footer a:hover {
+  color: #ff8225;
+}
+footer img {
+  width: 10em;
+  display: block;
+  margin: 2em auto;
+}
+footer p {
+  margin-top: 1em;
+}
+
+/* STARTSIDA */
+.page-content {
+  width: 70%;
+  max-width: 75em;
+  margin: auto;
+}
+.page-content h1 {
+  margin-bottom: 0.3em;
+}
+.page-content h1,
+.page-content h2 {
+  text-align: center;
+}
+
+p.mobile-text {
+  display: none;
+}
+
+#lp-grid {
+  width: 100%;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  grid-gap: 1.5em;
+  grid-template-areas: "hundmat hundmat halsband" "leksaker beds halsband";
+}
+#lp-grid .lp-grid-item {
+  min-height: 8em;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.4em;
+  position: relative;
+}
+#lp-grid .lp-grid-item p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#lp-grid .lp-grid-item .img {
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+#lp-grid #hundmat {
+  grid-area: hundmat;
+  background-color: #ff8225;
+}
+#lp-grid #hundmat .img {
+  background: url(../images/blackdog.jpg);
+  background-size: cover;
+  background-position-y: 70%;
+  opacity: 50%;
+}
+#lp-grid #hundmat .img:hover {
+  opacity: 40%;
+}
+#lp-grid #leksaker {
+  grid-area: leksaker;
+  background-color: #778b42;
+}
+#lp-grid #leksaker .img {
+  background: url(../images/groenendael.jpg);
+  background-size: cover;
+  opacity: 30%;
+}
+#lp-grid #leksaker .img:hover {
+  opacity: 20%;
+}
+#lp-grid #koppel {
+  grid-area: halsband;
+  background-color: #173b45;
+}
+#lp-grid #koppel .img {
+  background: url(../images/dalmatian.jpg);
+  background-size: cover;
+  background-position-y: 50%;
+  opacity: 28%;
+}
+#lp-grid #koppel .img:hover {
+  opacity: 20%;
+}
+#lp-grid #beds {
+  grid-area: beds;
+  background-color: #b43f3f;
+}
+#lp-grid #beds .img {
+  background: url(../images/labrador.jpg);
+  background-size: cover;
+  background-position-y: 50%;
+  opacity: 28%;
+}
+#lp-grid #beds .img:hover {
+  opacity: 20%;
+}
+
+.full-width {
+  background-color: #b43f3f;
+  color: white;
+  margin: 3em 0;
+}
+
+#quality-grid {
+  width: 70%;
+  margin: auto;
+  padding: 1em 1em 2em 1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 3em;
+  align-items: center;
+  justify-items: center;
+}
+#quality-grid .q-grid-item img {
+  width: 5em;
+}
+#quality-grid .q-grid-item:not(.textitem) {
+  text-align: center;
+}
+
+#chosen-products {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.card {
+  color: black;
+  background-color: white;
+  border-radius: 0 0 45px 45px;
+}
+.card:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.prod-desc {
+  padding: 1em 1.8em;
+}
+
+.prod-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+}
+
+p.arrow {
+  font-size: 1.1em;
+  background-color: #173b45;
+  color: white;
+  padding: 0.4em 0.7em;
+  border-radius: 50%;
+  transition: 0.8s ease;
+  -webkit-transition: 0.8s ease;
+  -moz-transition: 0.8s ease;
+}
+p.arrow:hover {
+  background-color: #b43f3f;
+}
+
+.news {
+  background-color: white;
+  margin: 2em 0;
+  padding: 1.5em;
+  border-radius: 45px;
+  display: flex;
+  gap: 1em;
+}
+.news img {
+  align-self: center;
+  max-width: 300px;
+}
+.news .article-text h2 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.empty-msg {
+  text-align: center;
+}
+
+.products-wrapper h2 {
+  text-align: left;
+  margin: 4em 0 0.5em;
+}
+
+.products-container {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.products-container .card {
+  max-width: 370px;
+}
+
+.breadcrumbs a {
+  color: #778b42;
+}
+.breadcrumbs a:hover {
+  color: #b43f3f;
+}
+.breadcrumbs a.current {
+  color: #173b45;
+}
+.breadcrumbs a.current:hover {
+  color: #b43f3f;
+}
+
+.single-product {
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  background-color: white;
+  border-radius: 50px;
+  padding: 1.5em;
+}
+.single-product .product-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+.single-product img {
+  border-radius: 50px;
+}
+.single-product .prod-ctrls {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+}
+.single-product .prod-ctrls select,
+.single-product .prod-ctrls input[type=number] {
+  font-size: 1em;
+  font-family: Play, Arial, Helvetica, sans-serif;
+  border: none;
+}
+.single-product .prod-ctrls select:focus,
+.single-product .prod-ctrls input[type=number]:focus {
+  outline: 2px solid #b43f3f;
+}
+.single-product .prod-ctrls select {
+  padding: 0.3em 0.3em 0.3em 0;
+  width: 100%;
+}
+.single-product .prod-ctrls input[type=number] {
+  padding: 0.3em;
+}
+.single-product .prod-ctrls input[type=submit] {
+  background-color: #173b45;
+  color: white;
+}
+.single-product .prod-ctrls input[type=submit]:hover {
+  background-color: #b43f3f;
+}
+
+.employee-container {
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+.employee-container .employee {
+  justify-items: center;
+}
+.employee-container .employee a {
+  color: #173b45;
+}
+.employee-container .employee a:hover {
+  color: #ff8225;
+}
+.employee-container img {
+  border-radius: 50%;
+  max-width: 20em;
+}
+
+.contact {
+  margin-top: 1em;
+}
+.contact label {
+  display: block;
+  margin-left: 0.5em;
+  margin-bottom: 0.3em;
+}
+.contact input[type=email],
+.contact input[type=text],
+.contact textarea {
+  font-family: Play, Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  padding: 0.8em;
+  width: 100%;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 20px;
+}
+.contact input[type=email]:focus,
+.contact input[type=text]:focus,
+.contact textarea:focus {
+  outline: 2px solid #ff8225;
+}
+.contact .form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.contact .form-buttons input[type=submit] {
+  background-color: #173b45;
+  color: white;
+}
+.contact .form-buttons input[type=submit]:hover {
+  background-color: #778b42;
+}
+.contact .form-buttons input[type=reset] {
+  background-color: #b43f3f;
+  color: white;
+}
+.contact .form-buttons input[type=reset]:hover {
+  background-color: #ff8225;
+}
+
+@media (max-width: 1103px) {
+  /* bredda allt sidinnehåll*/
+  .page-content {
+    width: 85%;
+  }
+  .products-container .card {
+    max-width: 300px;
+  }
+}
+@media (max-width: 1045px) {
+  /* HEADER */
+  .menu-flex {
+    width: 90%;
+    top: 0.5em;
+    padding: 0.2em;
+  }
+  .menu-flex .logo {
+    width: 7em;
+  }
+  .main-nav ul {
+    width: 60vw;
+  }
+  .hero-text {
+    font-size: 1em;
+  }
+  /* Justera quality-grid */
+  #quality-grid {
+    grid-gap: 2em;
+    width: 90%;
+  }
+  #quality-grid .q-grid-item img {
+    width: 3em;
+  }
+  .single-product .prod-ctrls {
+    flex-wrap: wrap;
+    margin-top: 1.5em;
+  }
+}
+@media (max-width: 745px) {
+  .products-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  .products-container .card {
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .hero-text {
+    left: 10%;
+    top: 60%;
+    font-size: 0.9em;
+    width: 45vw;
+  }
+  #lp-grid {
+    grid-template-areas: "hundmat halsband" "leksaker beds";
+  }
+  #lp-grid #hundmat .img {
+    background-position: 50%;
+  }
+  #lp-grid #koppel .img {
+    background-position-y: 30%;
+  }
+  #quality-grid,
+  #chosen-products {
+    grid-template-columns: 1fr 1fr;
+  }
+  .news img {
+    max-width: 150px;
+  }
+  .employee-container {
+    gap: 1em;
+  }
+  .employee-container img {
+    max-width: 10em;
+  }
+}
+/* HAMBURGERMENY */
+@media (max-width: 550px) {
+  .menu-flex {
+    width: 90%;
+    padding: 0.3em;
+  }
+  .menu-flex .logo {
+    position: relative;
+    z-index: 1;
+    margin-top: 0.1em;
+  }
+  .nav-container button {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .main-nav ul {
+    display: block;
+    position: absolute;
+    background-color: #173b45;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    min-height: 400px;
+    height: 40vh;
+    top: -5000px;
+    left: 0;
+    transition: 0.8s ease;
+    -webkit-transition: 0.8s ease;
+    -moz-transition: 0.8s ease;
+  }
+  .main-nav.active ul {
+    top: 0;
+  }
+  .hero-text {
+    display: none;
+  }
+  p.mobile-text {
+    display: block;
+  }
+  .products-wrapper h2 {
+    margin-top: 2em;
+  }
+  .employee-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .employee-container .employee {
+    margin: 1em 0;
+  }
+}
+@media (max-width: 460px) {
+  .menu-flex {
+    background-color: rgba(23, 59, 69, 0.85);
+    padding: 0 0.4em;
+  }
+  .nav-container button {
+    margin: 0.1em;
+  }
+  .nav-container button span {
+    width: 1.5em;
+    margin: 0.3em;
+  }
+  .nav-container button.active span:first-child {
+    transform: translateY(6px) rotate(225deg);
+  }
+  .nav-container button.active span:last-child {
+    transform: translateY(-6px) rotate(-225deg);
+  }
+  .page-content {
+    width: 95%;
+  }
+  #lp-grid {
+    grid-gap: 0.5em;
+  }
+  #quality-grid,
+  .products-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #chosen-products {
+    gap: 0.5em;
+  }
+  .news {
+    flex-direction: column;
+  }
+  .news img {
+    max-width: 100%;
+  }
+  footer img {
+    width: 4em;
+  }
+  .single-product {
+    grid-template-columns: 1fr;
+    grid-template-areas: "img" "desc";
+  }
+  .single-product .product-desc {
+    grid-area: desc;
+  }
+  .single-product img {
+    grid-area: img;
+  }
+}
+@media (max-width: 300px) {
+  #lp-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "hundmat" "halsband" "leksaker" "beds";
+  }
+  #lp-grid .lp-grid-item {
+    min-height: 6em;
+  }
+  #lp-grid #hundmat img {
+    background-position: 0%;
+  }
+  #chosen-products {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  .contact .form-buttons {
+    flex-wrap: wrap;
+  }
+  .contact .form-buttons input {
+    margin: 0.5em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
