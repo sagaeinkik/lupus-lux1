@@ -2,6 +2,7 @@
 
 /* STARTSIDA */
 
+//Div med textinnehåll, bilder osv
 .page-content {
     width: 70%;
     max-width: 75em;
@@ -16,6 +17,7 @@
     }
 }
 
+//Text att endast visa på mobil
 p.mobile-text {
     display: none;
 }
@@ -28,7 +30,7 @@ p.mobile-text {
     grid-gap: 1.5em;
     grid-template-areas:
         'hundmat hundmat halsband'
-        'leksaker grooming halsband';
+        'leksaker beds halsband';
 
     //Grid items
     .lp-grid-item {
@@ -98,8 +100,8 @@ p.mobile-text {
             }
         }
     }
-    #grooming {
-        grid-area: grooming;
+    #beds {
+        grid-area: beds;
         background-color: v.$red;
 
         .img {
@@ -115,12 +117,14 @@ p.mobile-text {
     }
 }
 
-//VARFÖR LUPUS LEX-GRID
+//Full-vid bakgrund
 .full-width {
     background-color: v.$red;
     color: white;
     margin: 3em 0;
 }
+
+//VARFÖR LUPUS LEX-GRID
 #quality-grid {
     width: 70%;
     margin: auto;
@@ -130,11 +134,13 @@ p.mobile-text {
     align-items: center;
     justify-items: center;
 
+    //Individuella items
     .q-grid-item {
         img {
             width: 5em;
         }
     }
+
     .q-grid-item:not(.textitem) {
         text-align: center;
     }
@@ -143,10 +149,11 @@ p.mobile-text {
 //UTVALDA PRODUKTER
 #chosen-products {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2em;
+    gap: 2em;
     margin: 2em 0;
 }
 
+//Själva korten
 .card {
     color: black;
     background-color: white;
@@ -157,10 +164,12 @@ p.mobile-text {
     }
 }
 
+//Titel, pris, pil
 .prod-desc {
     padding: 1em 1.8em;
 }
 
+//Pris och pil
 .prod-flex {
     display: flex;
     justify-content: space-between;
@@ -168,6 +177,7 @@ p.mobile-text {
     margin: 1em 0;
 }
 
+//Pil
 p.arrow {
     font-size: 1.1em;
     background-color: v.$darkblue;

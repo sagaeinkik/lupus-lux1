@@ -1,7 +1,19 @@
 @use 'vars' as v;
 
-/* HEADER */
+@media (max-width: 1103px) {
+    /* bredda allt sidinnehåll*/
+    .page-content {
+        width: 85%;
+    }
+
+    //Gör produkter lite mindre
+    .products-container .card {
+        max-width: 300px;
+    }
+}
+
 @media (max-width: 1045px) {
+    /* HEADER */
     //Bredda meny
     .menu-flex {
         width: 90%;
@@ -19,6 +31,36 @@
     .hero-text {
         font-size: 1em;
     }
+
+    /* Justera quality-grid */
+    #quality-grid {
+        grid-gap: 2em;
+        width: 90%;
+
+        .q-grid-item img {
+            width: 3em;
+        }
+    }
+
+    //Köp-kontroller enskild produkt
+    .single-product .prod-ctrls {
+        flex-wrap: wrap;
+        margin-top: 1.5em;
+    }
+}
+
+@media (max-width: 745px) {
+    //Gör om produktsidans container till grid
+    .products-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+
+        //Bredda korten
+        .card {
+            max-width: 100%;
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -28,6 +70,42 @@
         top: 60%;
         font-size: 0.9em;
         width: 45vw;
+    }
+
+    //Gör om kategori-grid
+    #lp-grid {
+        grid-template-areas: 'hundmat halsband' 'leksaker beds';
+
+        //Justera bakgrundsbilder
+        #hundmat .img {
+            background-position: 50%;
+        }
+
+        #koppel .img {
+            background-position-y: 30%;
+        }
+    }
+
+    //Gör om quality-grid
+    #quality-grid,
+    #chosen-products {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    //Justera nyhetsbilder
+    .news {
+        img {
+            max-width: 150px;
+        }
+    }
+
+    //OM OSS-grid
+    .employee-container {
+        gap: 1em;
+
+        img {
+            max-width: 10em;
+        }
     }
 }
 
@@ -83,9 +161,24 @@
     p.mobile-text {
         display: block;
     }
+
+    //produktsida
+    .products-wrapper h2 {
+        margin-top: 2em;
+    }
+
+    //Employees
+    .employee-container {
+        display: flex;
+        flex-direction: column;
+
+        .employee {
+            margin: 1em 0;
+        }
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 460px) {
     //Gör om meny lite
     .menu-flex {
         background-color: rgba(23, 59, 69, 0.85);
@@ -110,6 +203,87 @@
             span:last-child {
                 transform: translateY(-6px) rotate(-225deg);
             }
+        }
+    }
+
+    //Bredda alla sidor
+    .page-content {
+        width: 95%;
+    }
+
+    //kategori-grid
+    #lp-grid {
+        grid-gap: 0.5em;
+    }
+
+    //Quality-grid, produkter
+    #quality-grid,
+    .products-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    //Utvalda produkter
+    #chosen-products {
+        gap: 0.5em;
+    }
+
+    //Nyheter
+    .news {
+        flex-direction: column;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    //Logga i footer
+    footer img {
+        width: 4em;
+    }
+
+    //Gör om enskild produkt
+    .single-product {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'img' 'desc';
+
+        .product-desc {
+            grid-area: desc;
+        }
+
+        img {
+            grid-area: img;
+        }
+    }
+}
+
+@media (max-width: 300px) {
+    //Gör om kategori-grid
+    #lp-grid {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'hundmat' 'halsband' 'leksaker' 'beds';
+        .lp-grid-item {
+            min-height: 6em;
+        }
+
+        #hundmat img {
+            background-position: 0%;
+        }
+    }
+    //Gör om utvalda produkter
+    #chosen-products {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    //Kontaktformulär
+    .contact .form-buttons {
+        flex-wrap: wrap;
+
+        input {
+            margin: 0.5em;
         }
     }
 }

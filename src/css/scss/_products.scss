@@ -42,6 +42,8 @@
         }
     }
 }
+
+//ENSKILD PRODUKT
 .single-product {
     grid-template-columns: 1fr 1fr;
     gap: 2em;
@@ -49,6 +51,7 @@
     border-radius: 50px;
     padding: 1.5em;
 
+    //Beskrivning
     .product-desc {
         display: flex;
         flex-direction: column;
@@ -56,6 +59,12 @@
         margin: 2em 0;
     }
 
+    //Bild
+    img {
+        border-radius: 50px;
+    }
+
+    //Formulärkontroller
     .prod-ctrls {
         display: flex;
         justify-content: space-between;
@@ -82,11 +91,11 @@
         }
 
         input[type='submit'] {
-            background-color: v.$red;
+            background-color: v.$darkblue;
             color: white;
 
             &:hover {
-                background-color: v.$darkblue;
+                background-color: v.$red;
             }
         }
     }
