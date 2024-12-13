@@ -442,6 +442,11 @@ p.arrow:hover {
 .single-product .prod-ctrls select {
   padding: 0.3em 0.3em 0.3em 0;
   width: 100%;
+  color: black;
+}
+.single-product .prod-ctrls input,
+.single-product .prod-ctrls select {
+  margin: 0.5em;
 }
 .single-product .prod-ctrls input[type=number] {
   padding: 0.3em;
@@ -660,10 +665,10 @@ p.arrow:hover {
     margin: 0.3em;
   }
   .nav-container button.active span:first-child {
-    transform: translateY(6px) rotate(225deg);
+    transform: translateY(5px) rotate(225deg);
   }
   .nav-container button.active span:last-child {
-    transform: translateY(-6px) rotate(-225deg);
+    transform: translateY(-5px) rotate(-225deg);
   }
   .page-content {
     width: 95%;

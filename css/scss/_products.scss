@@ -84,6 +84,12 @@
         select {
             padding: 0.3em 0.3em 0.3em 0;
             width: 100%;
+            color: black;
+        }
+
+        input,
+        select {
+            margin: 0.5em;
         }
 
         input[type='number'] {
